@@ -1,20 +1,20 @@
-## LG C9 webOS 4.10.0 – Root HOWTO
+## LG OLED webOS 4 – Root HOWTO
 
-## 1. Prerequisites
+## Prerequisites
 
-- **Web:** Create developer account at https://webostv.developer.lge.com (same region as tv) an log in with this account on tv
-- **macOS tools:**
+- **Web/TV:** Create developer account at https://webostv.developer.lge.com (same region as tv) an log in with this account on tv
+- **macOS/Linux tools:**
   - `nodejs`
   - `npm`
 
-On the TV, in the **Developer Mode** app:
+## Install Developer mode app on TV
 
-- Enable **Developer Mode**
+On the TV, open content store, install the **Developer Mode** app. Open app, login (again) with developer account created in step 1.
+
+- Enable **Developer Mode** (Reboot after as suggested)
 - Enable the **Key Server**
 
----
-
-## 2. Install webOS CLI
+## Install webOS CLI
 
 ```bash
 npm install -g @webos-tools/cli
@@ -26,7 +26,7 @@ Verify if it's intstalled:
 ares -V
 ```
 
-## 3. Configure the device in webOS CLI
+## Configure the device in webOS CLI
 
 Then add the TV as a device:
 
@@ -40,7 +40,7 @@ Fetch basic device info:
 ares-device -i --device LGC9
 ```
 
-## 4. Sanity checks with ares-novacom
+## Sanity checks with ares-novacom
 
 Run a simple command on the TV:
 
@@ -57,7 +57,7 @@ log
 temp
 ```
 
-## 5. Rooting with faultmanager-autoroot
+## Rooting with faultmanager-autoroot
 
 Run the autoroot script via `ares-novacom`:
 
